@@ -1,0 +1,86 @@
+.img {
+
+    width: 100%;
+    height: 600px;
+    // box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+    position: relative;
+    top: -4px;
+}
+
+.hero__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    top: 6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(128, 128, 128);
+    z-index: 20;
+}
+
+.hero__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -21rem;
+}
+
+
+.hero__text__h2 {
+    position: relative;
+    top: -25px;
+}
+
+.hero__text__h22 {
+    position: relative;
+    top: -55px;
+}
+
+.hero__span {
+    color: rgba(8, 81, 158, 0.821);
+}
+
+.hero__product {
+     position: relative;
+     top: -10.70rem;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: rgb(241, 241, 241);
+}
+
+.hero__best {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 28rem;
+    gap: 1rem;
+}
+
+.hero__main {
+    position: relative;
+    height: 70vh;
+}
+
+@media screen and (max-height: 682px) {
+      .hero__best {
+           height: -40vh;
+           position: relative;
+           top: -55rem;
+      }
+}
+
+@media screen and (min-height: 800px ) {
+    .hero__best {
+        position: relative;
+        top: 30rem;
+    }
+}
+

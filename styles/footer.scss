@@ -1,0 +1,17 @@
+.footer__main {
+    background-color: rgba(157, 155, 155, 0.759);
+    height: 110px;
+    width: 100%;
+    margin-top: 20rem;
+}
+
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    margin-top: 15px;
+    color: rgba(8, 81, 158, 0.821);
+}
