@@ -35,7 +35,9 @@ const Hero = () => {
     >
     </motion.div>
     </div>
-
+      <div className='move__img'>
+        <img className='img__hero' src={'/hero.webp'} alt="" />
+      </div>
      <h2 className='hero__best'>Best <span className='hero__span'> Sellers</span></h2>
     </div>
   )

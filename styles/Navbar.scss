@@ -16,18 +16,20 @@
     position: fixed;
     backdrop-filter: blur(4px);
 
-    svg {
-color: rgb(76, 75, 75);
- background-color: rgba(8, 81, 158, 0.645);
- border-radius: 50%;
- height: 40px;
- width: 40px;
-   display: flex;
-   justify-self: center;
-   align-items: center;
-   cursor: pointer;
-    }
+//     svg {
+// color: rgb(76, 75, 75);
+//  background-color: rgba(8, 81, 158, 0.645);
+//  border-radius: 50%;
+//  height: 40px;
+//  width: 40px;
+//    display: flex;
+//    justify-self: center;
+//    align-items: center;
+//    cursor: pointer;
+//     }
 }
+
+
 
 .nav__img {
     height: 120px;
@@ -67,4 +69,17 @@ color: rgb(76, 75, 75);
     transition: transform .4s ease;
     border: none;
     background-color: transparent;
+
+    svg {
+           
+   color: rgb(76, 75, 75);
+   background-color: rgba(8, 81, 158, 0.645);
+border-radius: 50%;
+height: 40px;
+width: 40px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+    }
 }

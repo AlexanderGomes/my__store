@@ -311,3 +311,20 @@ cursor: pointer;
   }
 }
 
+
+.position {
+  position: relative;
+  top: -3.50rem;
+}
+
+.canc__main {
+  height: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 8rem;
+}
+

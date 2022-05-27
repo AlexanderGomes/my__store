@@ -15,6 +15,7 @@ export const StateContext = ({children}) => {
 
   let foundProduct;
   let index;
+  let itemIndex;
 
 const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => item._id === product._id)
@@ -30,6 +31,7 @@ const onAdd = (product, quantity) => {
             }
         })
         setCartItems(updatedCartItems)
+
     } else {
         product.quantity = quantity
 
@@ -40,7 +42,12 @@ const onAdd = (product, quantity) => {
 
 const onRemove = (product) => {
     foundProduct = cartItems.find((item) => item._id === product._id)
-    const newCartItems = cartItems.filder((item) => item._id !== product._id)
+    const newCartItems = cartItems.filter((item) => item._id !== product._id)
+    
+    newCartItems.slice(index, 0, {
+         ...foundProduct,
+         quantity: foundProduct.quantity + 1
+     })
 
     setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity)
@@ -48,18 +55,23 @@ const onRemove = (product) => {
 }
 
 
-const toggleCartItemQuantity = (id, value) => {
+    const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id)
     index = cartItems.findIndex((product) => product._id === id)
     const newCartItems = cartItems.filter((item) => item._id !== id)
+      itemIndex = cartItems.map((item, index) => {if(item._id === id) {return index}}).filter((item) => item !== undefined)[0]
 
     if (value === 'inc') {
         setCartItems([...newCartItems, {...foundProduct, quantity: foundProduct.quantity + 1}])
+        newCartItems.splice(itemIndex, 0,  { ...foundProduct, quantity: foundProduct.quantity + 1})
+        setCartItems([...newCartItems]);
         setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price)
         setTotalQuantities(prevTotalQuantities => prevTotalQuantities + 1)
     } else if (value === 'dec') {
         if (foundProduct.quantity > 1) {
             setCartItems([...newCartItems, {...foundProduct, quantity: foundProduct.quantity -1}])
+            newCartItems.splice(itemIndex, 0,  { ...foundProduct, quantity: foundProduct.quantity - 1})
+            setCartItems([...newCartItems]);
             setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price)
             setTotalQuantities(prevTotalQuantities => prevTotalQuantities - 1)
         }
