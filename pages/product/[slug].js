@@ -4,7 +4,7 @@ import {client, urlFor} from '../../LIB/client'
 import {Product} from '../../components'
 import { useStateContext } from '../../context/StateContext';
 
-const productDetails = ({product, products}) => {
+const ProductDetails = ({product, products}) => {
   const {onAdd, qty, decQty, incQty, setShowCart} = useStateContext()
   const { image, name, details, price } = product;
 
@@ -51,7 +51,7 @@ const productDetails = ({product, products}) => {
   )
 }
 
-export default productDetails
+export default ProductDetails
 
 
 export const getStaticPaths = async () => {
