@@ -44,7 +44,7 @@ const ProductDetails = ({product, products}) => {
        </p>
        <div className='buttons'>
     <button className='buy__now' onClick={handleBuyNow} >Buy Now</button>
-    <button className='add__cart' onClick={() => onAdd(product, qty)}>Add to Cart</button>
+    <button className='add__cart' onClick={() => onAdd(product, qty)}>Add</button>
        </div>
       </div>
     </div>
