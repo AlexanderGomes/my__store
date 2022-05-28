@@ -344,6 +344,8 @@
   .total{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: 2.80rem;
   }
   .total h3{
     font-size: 22px;
