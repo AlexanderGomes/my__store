@@ -1,4 +1,3 @@
-import { PresenceContext } from "framer-motion";
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
@@ -14,6 +13,7 @@ export const StateContext = ({ children }) => {
   let foundProduct;
   let index;
   let itemIndex;
+
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find(
@@ -55,6 +55,8 @@ export const StateContext = ({ children }) => {
     setCartItems(newCartItems);
   };
 
+
+  
   const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id);
     index = cartItems.findIndex((product) => product._id === id);
